@@ -134,7 +134,7 @@ async function ui_showCreateGroup() {
  * Shows the invite user dialog and populates it with data
  */
 function ui_showInviteUser() {
-    ui_loadDialog('inviteUser');
+    ui_loadDialog('inviteuser');
 }
 
 /**
