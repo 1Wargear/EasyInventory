@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <link rel="icon" type="image/x-icon" href="assets/inventory-icon.ico">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap 5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Custom -->
+        <link href="css/styles.css" rel="stylesheet" >
+        <script src="js/login.js" defer></script>
+        <script src="js/theme.js" defer></script>
+        <script src="js/responseive.js" defer></script>
+    </head>
+    <body>
+        <header class="navbar p-1 m-0">
+            <h1>
+                <img id="appicon" src="assets/inventory-icon.svg" height="50" width="50" alt="inventory-icon">
+                Easy Inventory
+            </h1>
+            <input type="button" value="Expand" onclick="response_expandHeader()" class="btn btn-secondary btn-expander">
+            <nav id="mainNav">
+                <a class="navbar-link" href="index.html">Home</a>
+                <a class="navbar-link" href="app/index.html">Live-Inventory</a>
+                <a class="navbar-link" href="downloads.html">Downloads</a>
+                <a class="navbar-link" href="aboutus.html">About us</a>
+            </nav>
+            <div id="headerBtns">
+                <input id="btnTheme" type="button" class="btn btn-dark" value="Dark" onclick="theme_toggle()" >
+                <input id="logout" type="button" class="btn btn-primary" value="Logout" onclick="login_logout()" >
+                <a id="login" href="login.html" class="btn btn-primary" role="button">Login</a>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <a role="button" class="getStarted p-4 m-5 w-50 float-center font-weight-bold" href="aboutus.html#getStarted"><span>Get Started</span></a>
+                </div>
+            </div>
+            <div class="featureCard m-1 p-2">
+                <div>
+                    <h2>Floorplan Navigation</h2>
+                    <p>
+                        Floor plan navigation enables intuitive navigation through the Invenar. Users only need to click on the room to see all the elements associated with that room.
+                    </p>
+                </div>
+                <img src="data/floorplan.svg" alt="floorplanExample">
+            </div>
+            <div class="featureCard m-1 p-2">
+                <div>
+                    <h2>Floorplan Heatmap</h2>
+                    <p>
+                        With the heatmaps you can easily get an overview of item distribution and attention requirements of items spread over the whole inventory.
+                    </p>
+                </div>
+                <img src="data/floorplanHeatMapNotifications.svg" alt="heatmapExample">
+            </div>
+            <div class="featureCard m-1 p-2">
+                <div>
+                    <h2>Notifications</h2>
+                    <p>
+                        Notifications provide information about items that require attention, these are cross-inventory to provide a quick overview.
+                    </p>
+                </div>
+                <img src="assets/notificationsExample.png" alt="notificationsExample">
+            </div>
+            <div class="featureCard m-1 p-2">
+                <div>
+                    <h2>Multiuser</h2>
+                    <p>
+                        Share your inventory with other people to get a better overview of the inventory in a club, for example. The authorisation system can also be used in small companies.
+                    </p>
+                </div>
+                <img src="assets/multiuserExample.png" alt="multiuserExample">
+            </div>
+            <div class="featureCard m-1 p-2">
+                <div>
+                    <h2>Crossplatform</h2>
+                    <p>
+                        Easy Inventory is cross-platform and can therefore be used natively not only on the web but also on many end devices in the future.
+                    </p>
+                </div>
+                <img src="assets/crossplatform.jpg" class="invert" alt="crossplatformExample">
+            </div>
+        </main>
+        <footer class="text-center fixed-bottom p-3 bg-grad-dark">
+            Easy Inventory | <a href="contact.html" class="invert-allways">Contact us</a>
+        </footer>
+    </body>
+</html>

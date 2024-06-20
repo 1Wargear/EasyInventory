@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <link rel="icon" type="image/x-icon" href="assets/inventory-icon.ico">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap 5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Custom -->
+        <link href="css/styles.css" rel="stylesheet" >
+        <script src="js/login.js" defer></script>
+        <script src="js/theme.js" defer></script>
+        <script src="js/responseive.js" defer></script>
+    </head>
+    <body>
+        <header class="navbar p-1 m-0 ">
+            <h1>
+                <img id="appicon" src="assets/inventory-icon.svg" height="50" width="50" class="invert" alt="inventory-icon">
+                Easy Inventory
+            </h1>
+            <input type="button" value="Expand" onclick="response_expandHeader()" class="btn btn-secondary btn-expander">
+            <nav id="mainNav">
+                <a class="navbar-link" href="index.html">Home</a>
+                <a class="navbar-link" href="app/index.html">Live-Inventory</a>
+                <a class="navbar-link" href="downloads.html">Downloads</a>
+                <a class="navbar-link" href="aboutus.html">About us</a>
+            </nav>
+            <div id="headerBtns">
+                <input id="btnTheme" type="button" class="btn btn-dark" value="Dark" onclick="theme_toggle()" >
+                <input id="logout" type="button" class="btn btn-primary" value="Logout" onclick="login_logout()" >
+                <a id="login" href="login.html" class="btn btn-primary" role="button">Login</a>
+            </div>
+        </header>
+        <main class="p-3">
+            <h1 class="text-center">Download Easy Inventory</h1>
+            <hr>
+            <h2>Desktop</h2>
+            <div class="flexrow">
+                <div class="card m-2 p-2">
+                    <h3>Windows</h3>
+                    <img class="plattformIcon" src="assets/windows.svg" alt="Windows">
+                    <ul>
+                        <li>
+                            User Installer
+                            <ul>
+                                <li>
+                                    <a href="dummy.html">With Runtime</a>
+                                </li>
+                                <li>
+                                    <a href="dummy.html">Standalone</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            System Installer
+                            <ul>
+                                <li>
+                                    <a href="dummy.html">With Runtime</a>
+                                </li>
+                                <li>
+                                    <a href="dummy.html">Standalone</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            .zip
+                            <ul>
+                                <li>
+                                    <a href="dummy.html">With Runtime</a>
+                                </li>
+                                <li>
+                                    <a href="dummy.html">Standalone</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card m-2 p-2">
+                    <h3>Linux</h3>
+                    <img class="plattformIcon" src="assets/linux.svg" alt="Linux">
+                    <ul>
+                        <li>
+                            .deb
+                            <ul>
+                                <li>
+                                    <a href="dummy.html">With Runtime</a>
+                                </li>
+                                <li>
+                                    <a href="dummy.html">Standalone</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            .tar.gz
+                            <ul>
+                                <li>
+                                    <a href="dummy.html">With Runtime</a>
+                                </li>
+                                <li>
+                                    <a href="dummy.html">Standalone</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card m-2 p-2">
+                    <h3>Mac</h3>
+                    <img class="plattformIcon invert" src="assets/apple.svg" alt="MacOs">
+                    <ul>
+                        <li>
+                            <a href="dummy.html">With Runtime</a>
+                        </li>
+                        <li>
+                            <a href="dummy.html">Standalone</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h2>Mobile</h2>
+                <div class="flexrow">
+                    <div class="card m-2 p-2">
+                        <h3>Android</h3>
+                        <img class="plattformIcon" src="assets/android.svg" alt="Android">
+                        <ul>
+                            <li>
+                                <a href="dummy.html">APK</a>
+                            </li>
+                            <li>
+                                <a href="dummy.html">Playstore</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card m-2 p-2">
+                        <h3>IOS</h3>
+                        <img class="plattformIcon invert" src="assets/apple.svg" alt="IOS">
+                        <ul>
+                            <li>
+                                <a href="dummy.html">Sideloading</a>
+                            </li>
+                            <li>
+                                <a href="dummy.html">App-Store</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="text-center fixed-bottom p-3 bg-light">
+            Easy Inventory | <a href="contact.html" class="invert-allways">Contact us</a>
+        </footer>
+    </body>
+</html>

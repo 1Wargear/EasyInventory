@@ -1,0 +1,22 @@
+<form>
+    <div class="modal-header">
+        <h5>Add Role</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" onclick="ui_closeDialog()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <label for="roleName" class="form-label">Rolename:</label>
+        <input type="text" name="roleName" id="roleName" class="form-control form-control">
+
+        <label for="memberof" class="form-label">Member of:</label>
+        <select name="memberof" id="memberof" class="form-control form-control">
+            <option selected>User</option>
+            <option>Admin</option>
+        </select>
+    </div>
+    <div class="modal-footer">
+        <input type="reset" value="Cancel" data-bs-dismiss="modal" onclick="ui_closeDialog()" class="btn btn-danger btn-lg px-5" id="btnCancel">
+        <input type="submit" value="Create" data-bs-dismiss="modal" class="btn btn-success btn-lg px-5" id="btnSubmit">
+    </div>
+</form>

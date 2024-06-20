@@ -1,0 +1,20 @@
+<h1>Inventory: </h1>
+<label for="place" class="form-label">Item Place:</label>
+<select name="place" id="place" class="form-control form-control" onchange="uiaction_onLoadInventoryItems()" >
+    <option selected>All</option>
+    <option>Balcony</option>
+    <option>Bathroom</option>
+    <option>Bedroom</option>
+    <option>Floor</option>
+    <option>Kitchen</option>
+    <option>Livingroom</option>
+</select>
+<hr/>
+<input type="button" value="Add Item" data-bs-toggle="modal" data-bs-target="#modalDialog"  class="btn btn-primary" onclick="ui_showAddItem()">
+<table id="itemTable" class="table table-bordered">
+    <tr>
+        <th>Item</th>
+        <th>Notification</th>
+        <th>Action</th>
+    </tr>
+</table>

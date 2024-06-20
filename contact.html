@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact</title>
+        <link rel="icon" type="image/x-icon" href="assets/inventory-icon.ico">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- Bootstrap 5 -->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Custom -->
+        <link href="css/styles.css" rel="stylesheet" >
+        <script src="js/login.js" defer></script>
+        <script src="js/theme.js" defer></script>
+    </head>
+    <body  class="bg-grad-dark">
+        <div class="container vh-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div id="formThemeMaster" class="card bg-dark text-white p-4">
+                    <h1 class="text-center text-uppercase">Contact us</h1>
+                    <form action="contact" method="post">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" name="name" id="name" class="form-control form-control">
+                        <label for="mail" class="form-label">E-Mail:</label>
+                        <input type="email" name="mail" id="mail" class="form-control form-control" required>
+                        <label for="content" class="form-label">Content:</label>
+                        <textarea name="content" id="content" cols="30" rows="10" class="form-control form-control"></textarea>
+                        <br>
+                        <input type="reset" onclick="navigation_navback()" value="Cancel" class="btn btn-danger btn-lg px-5" id="btnCancel">
+                        <input type="submit" value="Send" class="btn btn-success btn-lg px-5" id="btnSubmit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

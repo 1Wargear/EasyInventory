@@ -1,0 +1,16 @@
+<form>
+    <div class="modal-header">
+        <h5>Create Group</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" onclick="ui_closeDialog()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <label for="name" class="form-label">Groupname:</label>
+        <input type="text" name="name" id="name" class="form-control form-control" required>
+    </div>
+    <div class="modal-footer">
+        <input type="reset" value="Cancel" data-bs-dismiss="modal" onclick="ui_closeDialog()" class="btn btn-danger btn-lg px-5" id="btnCancel">
+        <input type="button" value="Create" data-bs-dismiss="modal" class="btn btn-success btn-lg px-5" id="btnSubmit">
+    </div>
+</form>

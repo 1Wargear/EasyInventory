@@ -1,0 +1,14 @@
+<h1>Filter</h1>
+<div id="heatmap-container" class="card" role="region"></div>
+    <div class="card-header">
+        <label for="heatMapActive" class="form-label">Heatmap</label>
+        <input type="checkbox" name="heatMapActive" id="heatMapActive" class="form-check-input invert" onchange="heatmap_loadMap()">    
+    </div>
+    <div class="card-body">
+        <label for="heatMapItemCount" class="form-label">Itemcount</label>
+        <input type="radio" id="heatMapItemCount" name="heatMap" value="itemCount" class="form-check-input" onchange="heatmap_loadMap()" checked>
+    
+        <label for="heatMapNotifications" class="form-label">Notifications</label>
+        <input type="radio" id="heatMapNotifications" name="heatMap" value="notifications" class="form-check-input" onchange="heatmap_loadMap()">
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<form>
+    <div class="modal-header">
+        <h5>Add Item</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" onclick="ui_closeDialog()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <label for="itemName" class="form-label">Itemname:</label>
+        <input type="text" name="itemName" id="itemName" class="form-control form-control">
+        <label for="itemType" class="form-label">Itemtype:</label>
+        <input type="text" name="itemType" id="itemType" class="form-control form-control">
+        <label for="itemLocation" class="form-label">Location:</label>
+        <select name="itemLocation" id="itemLocation" class="form-control form-control">
+            <option>Balcony</option>
+            <option>Bathroom</option>
+            <option>Bedroom</option>
+            <option>Floor</option>
+            <option>Kitchen</option>
+            <option>Livingroom</option>
+        </select>
+        <hr />
+        <h6>Notification</h6>
+        <label for="notifyDate" class="form-label">Date:</label>
+        <input type="date" name="nanotifyDateme" id="notifyDate" class="form-control form-control">
+        <label for="notifyMessage" class="form-label">Message:</label>
+        <input type="text" name="notifyMessage" id="notifyMessage" class="form-control form-control">
+    </div>
+    <div class="modal-footer">
+        <input type="reset" value="Cancel" data-bs-dismiss="modal" onclick="ui_closeDialog()" class="btn btn-danger btn-lg px-5" id="btnCancel">
+        <input type="submit" value="Create" data-bs-dismiss="modal" class="btn btn-success btn-lg px-5" id="btnSubmit">
+    </div>
+</form>

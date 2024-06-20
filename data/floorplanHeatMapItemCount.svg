@@ -1,0 +1,19 @@
+<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg">    
+    <rect width="295" height="495" x="5" y="500" fill="#cc0033" fill-opacity="0.75" style="stroke-width:5;stroke:black" />
+    <text x="20" y="800" fill="white">Bedroom</text>
+    
+    <rect width="150" height="345" x="300" y="650" fill="#ff0000" fill-opacity="0.75" style="stroke-width:5;stroke:black" />
+    <text x="320" y="800" fill="white">Bathroom</text>
+
+    <rect width="300" height="345" x="450" y="650" fill="#990066" fill-opacity="0.75" style="stroke-width:5;stroke:black" />
+    <text x="470" y="800" fill="white">Kitchen</text>
+
+    <rect width="695" height="150" x="300" y="500" fill="#1900e6" fill-opacity="0.75" style="stroke-width:5;stroke:black" />
+    <text x="320" y="630" fill="white">Floor</text>
+
+    <rect width="695" height="350" x="300" y="150" fill="#3300cc" fill-opacity="0.75" style="stroke-width:5;stroke:black" />
+    <text x="320" y="450" fill="white">Livingroom</text>
+
+    <rect width="450" height="145" x="400" y="5" fill="#0000ff" fill-opacity="0.75" style="stroke-width:5;stroke:black" />
+    <text x="420" y="130" fill="white">Balcony</text>
+</svg>

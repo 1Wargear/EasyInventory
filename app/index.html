@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Live-Inventory</title>
+        <link rel="icon" type="image/x-icon" href="../assets/inventory-icon.ico">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap 5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Custom -->
+        <link href="../css/styles.css" rel="stylesheet" >
+        <script src="../js/login.js" defer></script>
+        <script src="../js/theme.js" defer></script>
+        <script src="../js/responseive.js" defer></script>
+        <script src="js/componentLoader.js" defer></script>
+        <script src="js/actions.js" defer></script>
+        <script src="js/api.js" defer></script>
+        <script src="js/heatmap.js" defer></script>
+    </head>
+    <body>
+        <header class="navbar p-1 m-0">
+            <h1>
+                <img id="appicon" src="../assets/inventory-icon.svg" height="50" width="50" class="invert" alt="inventory-icon">
+                Live Inventory
+            </h1>
+            <input type="button" value="Expand" onclick="response_expandHeader()" class="btn btn-secondary btn-expander">
+            <nav id="mainNav">
+                <a class="navbar-link" href="../index.html">Home</a>
+                <input type="button" value="Start" onclick="ui_showStartPage()" >
+                <input type="button" value="Inventories" data-bs-toggle="modal" data-bs-target="#modalDialog" onclick="ui_showInventoryDialog()" >
+                <input type="button" value="Groups" data-bs-toggle="modal" data-bs-target="#modalDialog" onclick="ui_showGroupsDialog()" >
+            </nav>
+            <div id="headerBtns">
+                <input id="btnTheme" type="button" class="btn btn-dark" value="Dark" onclick="theme_toggle()" >
+                <input id="logout" type="button" class="btn btn-primary" value="Logout" onclick="login_logout()" >
+                <a id="login" href="../login.html" class="btn btn-primary" role="button">Login</a>
+            </div>
+        </header>
+        <div class="modal fade" id="modalDialog" tabindex="-1" role="dialog" aria-label="modalDialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+               
+                </div>
+            </div>
+        </div>
+        <div class="app-grid-container">
+            <aside class="card app-grid-left">
+                <div class="d-flex justify-content-center">
+                    <span class="sr-only">Loading component...</span>
+                    <div class="spinner-border" role="status">
+                    </div>
+                </div>
+            </aside>
+            <main class="card app-grid-main">
+                <div class="d-flex justify-content-center">
+                    <span class="sr-only">Loading component...</span>
+                    <div class="spinner-border" role="status">
+                    </div>
+                </div>
+            </main>
+            <aside class="card app-grid-right">
+                <div class="d-flex justify-content-center">
+                    <span class="sr-only">Loading component...</span>
+                    <div class="spinner-border" role="status">
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <footer class="text-center fixed-bottom p-3">
+            Easy Inventory | visit <a href="../index.html" class="invert-allways"> Home-Page</a>
+        </footer>
+    </body>
+</html>

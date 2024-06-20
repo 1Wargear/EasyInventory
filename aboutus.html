@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About Easy Inventory</title>
+        <link rel="icon" type="image/x-icon" href="assets/inventory-icon.ico">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- Bootstrap 5 -->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Custom -->
+        <link href="css/styles.css" rel="stylesheet" >
+        <script src="js/login.js" defer></script>
+        <script src="js/theme.js" defer></script>
+        <script src="js/responseive.js" defer></script>
+    </head>
+    <body>
+        <header class="navbar p-1 m-0 ">
+            <h1>
+                <img id="appicon" src="assets/inventory-icon.svg" height="50" width="50" class="invert" alt="inventory-icon">
+                Easy Inventory
+            </h1>
+            <input type="button" value="Expand" onclick="response_expandHeader()" class="btn btn-secondary btn-expander">
+            <nav id="mainNav">
+                <a class="navbar-link" href="index.html">Home</a>
+                <a class="navbar-link" href="app/index.html">Live-Inventory</a>
+                <a class="navbar-link" href="downloads.html">Downloads</a>
+                <a class="navbar-link" href="aboutus.html">About us</a>
+            </nav>
+            <div id="headerBtns">
+                <input id="btnTheme" type="button" class="btn btn-dark" value="Dark" onclick="theme_toggle()" >
+                <input id="logout" type="button" class="btn btn-primary" value="Logout" onclick="login_logout()" >
+                <a id="login" href="login.html" class="btn btn-primary" role="button">Login</a>
+            </div>
+        </header>
+        <main class="card p-2 m-2">
+            <h1 class="text-center">About us</h1>
+            <article>
+                <h2>What is Easy Inventory</h2>
+                <em>Easy Inventory</em> ist die ideale Lösung für Vereine, kleine Unternehmen und das Zuhause, um den Überblick über Bestände einfach und effizient zu behalten. Mit einer benutzerfreundlichen Oberfläche und intuitiver Bedienung macht <em>Easy Inventory</em> das Inventarmanagement zu einem Kinderspiel. Ob Büromaterial, Sportausrüstung oder Haushaltsartikel, mit <em>Easy Inventory</em> wissen Sie immer, was Sie haben und was Sie brauchen. Steigern Sie Ihre Produktivität und sparen Sie Zeit und Geld mit <em>Easy Inventory</em> – dem cleveren Weg, Ihre Bestände zu verwalten.
+            </article>
+            <hr>
+            <article>
+                <h2 id="getStarted">Get Started</h2>
+                <p>
+                    To get started width <strong>Easy Inventory</strong> <a href="login.html">create a account</a> and download the <a href="downloads.html">App</a> (currently not possible) or use the Browser <a href="app/index.html">Live-Inventory</a>
+                    Now that you are in the <em>Live-Inventory</em> you can start by creating a Groupprofile. All Inventories are tied to a Group so that you can invite an manage the users in a Inventory.
+                    After the Group was created you have to create a Inventory by clicking the <em>Create Inventory</em> button in the <strong>Inventory</strong> section. Inside of the <em>Inventory</em> you can create a new Item with the <em>Add Item</em> button.
+                    When adding a Item you can specify a <strong>Notification</strong> with a <em>Date</em> and a <em>Message</em> these notifications will be shown once the current date is greater or equal to the <string>Notify Date</string>.
+                </p>
+            </article>
+            <hr>
+            <article>
+                <h2>FAQ</h2>
+                <ol>
+                    <li>
+                        <strong>Does Easy Inventory work?</strong>
+                        <br>
+                        <p>No Easy Ienventory is currently only consisting of the Frontend all functions that store information do so in the browsers local storage.</p>
+                    </li>
+                    <li>
+                        <strong>When will Easy Inventory work?</strong>
+                        <br>
+                        <p>The plan ist to create a Backend and Database for Easy Inventory when the assignemt is finished and time is available</p>
+                    </li>
+                    <li>
+                        <strong>Will Easy Inventory cost money?</strong>
+                        <br>
+                        <p>No probably not denpends on hosting costs and other stuff</p>
+                    </li>
+                    <li>
+                        <strong>Is Easy Inventory Open-Source?</strong>
+                        <br>
+                        <p>Yes, you can find it on <a href="https://github.com/1Wargear/EasyInventory">GitHub</a> </p>
+                    </li>
+                </ol>
+            </article>
+            <hr>
+            <article>
+                <h2>Thirdparty Ressources</h2>
+                <h3>Images</h3>
+                The Plattformicons used in the Download Page are from <a href="https://www.svgrepo.com">svgrepo.com</a>
+                <ul>
+                    <li>
+                        <a href="https://www.svgrepo.com/svg/176748/windows-windows">Windows Icon</a>
+                    </li>
+                    <li>
+                        <a href="https://www.svgrepo.com/svg/448236/linux">Linux Icon</a>
+                    </li>
+                    <li>
+                        <a href="https://www.svgrepo.com/svg/511330/apple-173">Apple Icon</a>
+                    </li>
+                    <li>
+                        <a href="https://www.svgrepo.com/svg/475631/android-color">Android Icon</a>
+                    </li>
+                </ul>
+                <h3>Icon</h3>
+                The Icon for easy inventory is from <a href="https://www.svgrepo.com">svgrepo.com</a> a custom made icon will follow (hopefully)
+                <a href="https://www.svgrepo.com/svg/375538/asset-inventory">Inventory Icon</a>
+                <!-- Footer visibility hack -->
+                <br> 
+                <br>
+            </article>
+        </main>
+        <footer class="text-center fixed-bottom p-3 bg-light">
+            Easy Inventory | <a href="contact.html" class="invert-allways">Contact us</a>
+        </footer>
+    </body>
+</html>

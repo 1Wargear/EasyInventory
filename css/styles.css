@@ -1,0 +1,253 @@
+/*
+Backgroud gradiants and text color combinations
+*/
+.bg-darkpage{
+    background-color: #0c0d13;
+}
+
+.bg-grad-dark {
+    color: white;
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 );
+}
+
+.bg-grad-light {
+    color: #212529;
+    background: radial-gradient(ellipse at bottom, #58608d 0%, #3678c9 );
+}
+
+/*
+Article styles for the about page
+*/
+article {
+    margin-bottom: 2em;
+}
+
+/*
+Navigation baar styling
+*/
+nav * {
+    background: none;
+    border: none;
+    outline: none;
+    text-align: left;
+    color: #fff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-decoration: none;
+    opacity: 0.75;
+    margin: 0.5em;
+    font-size: large;
+}
+
+nav *:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+}
+
+/*
+flexible rows for the download page 
+*/
+.flexrow {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flexrow div {
+    position: relative;
+    width: 100%;
+    flex: 1;
+}
+
+/*
+Plattform icon sytles for the download page
+*/
+.plattformIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-height: 100%;
+    width: 50%;
+    padding: 1em;
+    max-width: 25vw;
+}
+
+/*
+Image color inversion for theme readability
+*/
+.invertable { 
+    filter: invert(0%); 
+}
+
+.invert { 
+    filter: invert(100%); 
+}
+
+.invert-allways { 
+    filter: invert(100%); 
+}
+
+/*
+App grid of the Live-Inventory
+*/
+.app-grid-container {
+    display: flex;
+    padding: 1em;
+    gap: 1em;
+}
+
+.app-grid-left { flex-grow: 1; }
+.app-grid-main { flex-grow: 3; }
+.app-grid-right { flex-grow: 1; }
+
+.app-grid-container > main,aside {
+    height: 80vh;   
+    overflow-y: scroll;
+}
+
+.btn-expander {
+    display: none;
+}
+
+/*
+Floorplan and area cursor
+*/
+.floorplan{
+    max-height: 100%;
+    padding: 1em;
+}
+
+map area {
+    cursor: crosshair;
+}
+
+/*
+Homepage Feature card
+*/
+.featureCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 30vh;
+    gap:3em;
+    border: rgb(33, 37, 41, 0.5) 2px solid;
+    border-radius: 5px;
+    background-color: rgb(33, 37, 41, 0.0);
+}
+
+.featureCard:nth-child(even) {
+    background-color: rgb(33, 37, 41, 0.3);
+    flex-direction: row-reverse;
+}
+
+.featureCard img {
+    max-height: 100%;
+    max-width: 50%;
+}
+
+.featureCard div {
+    width: 25%;
+}
+
+@media screen and (max-width: 800px) {
+    .flexrow div {
+        flex: 100%;
+    }
+
+    nav * {
+        display: block;
+        min-width: 60vw;
+        max-width: 90vw;
+        margin-top: 0.5em;
+    }
+
+    header > div {
+        display: flex;
+        width: 100vw;
+    }
+
+    header > div > input, a {
+        flex-grow: 1;
+        margin: 5px;
+    }
+
+    .btn-expander {
+        display: inline;
+    }
+
+    .app-grid-container {
+        display: flex;
+        padding: 0.5em;
+    }
+
+    .app-grid-left { display: none; }
+    .app-grid-main { flex-grow: 1; }
+    .app-grid-right { display: none; }
+
+    .featureCard {
+        flex-direction: column;
+        height: 50vh;
+    }    
+
+    .featureCard:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .featureCard img {
+        max-height: 50%;
+        max-width: 100%;
+        object-fit: scale-down;
+    }
+    
+    .featureCard div {
+        width: 100%;
+    }
+}
+
+
+/*
+Get Started Button
+*/
+.getStarted {
+    border: none;
+    padding: 20px;
+    margin: 5px;
+    width: 200px;
+    border-radius: 4px;
+    background-color: #f4511e;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: larger;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.getStarted span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+.getStarted span:after {
+    content: '\26EF';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    color: #FFFFFF;
+}
+
+.getStarted:hover span {
+    padding-right: 1.5em;
+    color: #FFFFFF;
+}
+
+.getStarted:hover span:after {
+    opacity: 1;
+    right: 0;
+    color: #FFFFFF;
+}

@@ -1,0 +1,38 @@
+<h1>Groupprofile: </h1>
+    
+<label for="groupname" class="form-label">Groupname:</label>
+<input type="text" name="groupname" id="groupname" class="form-control form-control" readonly>
+
+<hr/>
+
+<h2>Users</h2>
+<input type="button" class="btn btn-primary m-3" value="Invite User" data-bs-toggle="modal" data-bs-target="#modalDialog" onclick="ui_showInviteUser()"></button>
+<table class="table table-bordered" id="members">
+    <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>E-Mail</th>
+        <th>Phone</th>
+    </tr>
+</table>
+
+<h2>Inventories</h2>
+<input type="button" class="btn btn-primary m-3" value="Create Inventory" data-bs-toggle="modal" data-bs-target="#modalDialog" onclick="ui_showCreateInventory()"></button>
+<table class="table table-bordered" id="inventories">
+    <tr>
+        <th>Name</th>
+        <th>Itemcount</th>
+        <th>Notificationcount</th>
+        <th>Status</th>
+    </tr>
+</table>
+
+<h2>Roles</h2>
+<input type="button" class="btn btn-primary m-3" value="Add Role" data-bs-toggle="modal" data-bs-target="#modalDialog" onclick="ui_showAddRole()"></button>
+<table class="table table-bordered" id="roles">
+    <tr>
+        <th>Name</th>
+        <th>Member of</th>
+        <th>Active</th>
+    </tr>
+</table>
