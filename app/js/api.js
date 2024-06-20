@@ -211,11 +211,12 @@ function api_addRole(groupName, roleName, memberOf) {
     groups.forEach(g => {
         if(g.name === groupName)
         {
-            g.roles.push(newRole);
+            group = g;
         }
     });
 
-    api_getCurrentGroup().roles.push(newRole);
+    group.roles.push(newRole);
+    api_setCurrentGroup(group);
 
     localStorage.setItem(groupKey, JSON.stringify(groups));
     return newRole;

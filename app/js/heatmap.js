@@ -7,7 +7,7 @@ async function heatmap_loadMap() {
     console.log(heatmapActive);
 
     if(!heatmapActive){
-        floorplanImage.src = '/data/floorplan.svg';
+        floorplanImage.src = 'EasyInventory/data/floorplan.svg';
         return;
     }
 
@@ -15,9 +15,9 @@ async function heatmap_loadMap() {
     console.log(heatmap);
     
     if(heatmap === 'itemCount'){
-        floorplanImage.src = '/data/floorplanHeatMapItemCount.svg';
+        floorplanImage.src = 'EasyInventory/data/floorplanHeatMapItemCount.svg';
     }
     if(heatmap === 'notifications'){
-        floorplanImage.src = '/data/floorplanHeatMapNotifications.svg';
+        floorplanImage.src = 'EasyInventory/data/floorplanHeatMapNotifications.svg';
     }
 }
