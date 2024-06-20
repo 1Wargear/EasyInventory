@@ -118,6 +118,9 @@ function uiaction_onLoadInventories(){
  */
 function uiaction_onLoadInventoryItems() {
     const inventory = api_getCurrentInv();
+
+    document.getElementById('inventory').innerText = `Inventory: ${inventory.name}`;
+
     const itemsTable = document.getElementById('itemTable');
     itemsTable.innerHTML = '<tr><th>Item</th><th>Notification</th><th>Action</th></tr>';
 
