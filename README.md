@@ -2,7 +2,7 @@
 Easy Inventory is designed to provide a simple solution for inventory management. The target group are home users, small companies and organizations/association. Easy inventory should be used to manage items that require regular attention, or to manage and, if necessary, update stock.
 
 ## Getting started
-You can ether use the provied version with this link [http://easyinventory.1wargear.github.io/](http://easyinventory.1wargear.github.io/) or install it localy as described in the [Setup](Setup) section.
+You can ether use the provied version with this link [https://1wargear.github.io/EasyInventory/](https://1wargear.github.io/EasyInventory/) or install it localy as described in the [Setup](Setup) section.
 
 Wehen you have open the homepage you can read more about using easy inventory in the Get Starget section.
 
