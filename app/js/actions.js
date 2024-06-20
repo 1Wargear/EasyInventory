@@ -25,8 +25,8 @@ function uiaction_onCreateInventory(e) {
     const groupName = document.getElementById('inventoryGroup').value;
     const inventory = api_createInventory(groupName, inventoryName);
 
-    const newInventory = api_setCurrentInv(inventory);
-    uiaction_addInventory(newInventory);
+    api_setCurrentInv(inventory);
+    uiaction_addInventory(inventory);
     ui_closeDialog();
 }
 

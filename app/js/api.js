@@ -79,6 +79,7 @@ function api_createInventory(groupName, name) {
     }
 
     localStorage.setItem(groupKey, JSON.stringify(groups));
+    api_getCurrentGroup().inventories.push(newInventory);
     return newInventory;
 }
 
@@ -113,6 +114,7 @@ function api_addItem(groupName, inventoryName, itemName, itemType, place, notify
     }
 
     localStorage.setItem(groupKey, JSON.stringify(groups));
+    api_getCurrentInv().items.push(newItem);
     return newItem;
 }
 
@@ -129,20 +131,31 @@ function api_deleteItem(item) {
         {
             g.inventories.forEach(inv => {
                 if(inv.name === inventoryName){
-                    const newItems = []
-                    inv.items.forEach(i => {
-                        if(i.name !== item.name){
-                            newItems.push(i);
-                        }
-                    });
-                    inv.items = newItems;
+                    api_inventoryDeleteItem(inv, item);
                 }
             });
         }
     });
 
+    api_inventoryDeleteItem(api_getCurrentInv(), item);
+
     localStorage.setItem(groupKey, JSON.stringify(groups));
     uiaction_onLoadInventoryItems();
+}
+
+/**
+ * Deletes item from the specified inventory
+ * @param {Object} inv The target inventory to delete the item from
+ * @param {Object} item The item to delte
+ */
+function api_inventoryDeleteItem(inv, item) {
+    const newItems = []
+    inv.items.forEach(i => {
+        if(i.name !== item.name){
+            newItems.push(i);
+        }
+    });
+    inv.items = newItems;
 }
 
 /**
@@ -199,6 +212,8 @@ function api_addRole(groupName, roleName, memberOf) {
             g.roles.push(newRole);
         }
     });
+
+    api_getCurrentGroup().roles.push(newRole);
 
     localStorage.setItem(groupKey, JSON.stringify(groups));
     return newRole;

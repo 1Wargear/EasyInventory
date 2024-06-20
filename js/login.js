@@ -46,7 +46,7 @@ function login_getUser() {
 function login_logout() {
     localStorage.removeItem(userKey);
     login_toggleButton();
-    window.location.href = '/'
+    window.location.href = '/EasyInventory' //Comparability fix for github-pages
 }
 
 /**
