@@ -79,7 +79,7 @@ function api_createInventory(groupName, name) {
     }
 
     localStorage.setItem(groupKey, JSON.stringify(groups));
-    api_getCurrentGroup().inventories.push(newInventory);
+    api_setCurrentGroup(group);
     return newInventory;
 }
 
@@ -114,7 +114,7 @@ function api_addItem(groupName, inventoryName, itemName, itemType, place, notify
     }
 
     localStorage.setItem(groupKey, JSON.stringify(groups));
-    api_getCurrentInv().items.push(newItem);
+    api_setCurrentInv(inventory);
     return newItem;
 }
 
@@ -137,7 +137,9 @@ function api_deleteItem(item) {
         }
     });
 
-    api_inventoryDeleteItem(api_getCurrentInv(), item);
+    const currentInv = api_getCurrentInv();
+    api_inventoryDeleteItem(currentInv, item);
+    api_setCurrentInv(currentInv);
 
     localStorage.setItem(groupKey, JSON.stringify(groups));
     uiaction_onLoadInventoryItems();
