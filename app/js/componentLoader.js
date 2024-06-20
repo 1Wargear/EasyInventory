@@ -84,10 +84,10 @@ async function ui_showInventory(){
     response_resizeMap();
     uiaction_onLoadItemMap();
 
-    if(window.innerWidth > 800) {
-        ui_lastWidth = 801;
-        ui_copyToMain();
-    }
+    if(window.innerWidth <= 800)
+        ui_copyToMain(true);
+
+    ui_lastWidth = window.innerWidth;
     window.addEventListener('resize', ui_copyToMain);
 }
 
@@ -210,12 +210,15 @@ function ui_setAppGridLayout(columns) {
 
 /**
  * Updates the Layout to copy the content of the right aside to the main column if not enouth space is available and copies it back if the space is available again
+ * @param {boolean} force Forces a copy regardless of last size
  */
-function ui_copyToMain() {
+function ui_copyToMain(force = false) {
+    console.log(force);
     const main = document.getElementsByClassName('app-grid-main')[0];
     const left = document.getElementsByClassName('app-grid-right')[0];
 
-    if(window.innerWidth > 800 && ui_lastWidth <= 800) {
+    console.log(ui_lastWidth);
+    if(window.innerWidth > 800 && (ui_lastWidth <= 800 || force === true)) {
         left.innerHTML = main.innerHTML;
 
         loadComponent('floorplan', 'main');
@@ -223,7 +226,7 @@ function ui_copyToMain() {
         response_resizeMap();
         uiaction_onLoadItemMap();
     }
-    if(window.innerWidth <= 800 && ui_lastWidth > 800) { 
+    if(window.innerWidth <= 800 && (ui_lastWidth > 800 || force === true)) { 
         main.innerHTML = left.innerHTML;
         left.innerHTML = '';
     }
